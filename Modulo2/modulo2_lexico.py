@@ -65,7 +65,6 @@ class Lex():
     elif self.state == 1:
       if symbol == '.':
         self.state = 2
-      else:
 
     #State 2
     elif self.state == 2:
@@ -328,7 +327,6 @@ class Lex():
         self.state = 51
       else:
         self.state = 50
-    else
 
 
 
@@ -346,9 +344,9 @@ class Lex():
   def dataType(self, state):
     self.boolToken = True
     if state == 1:
-        self.token = 'INTNUMB'
+        self.token = 'INT'
     elif state == 3:
-        self.token = 'FLOATNUMB'
+        self.token = 'FLOAT'
     elif state == 5:
         self.token = 'OR'
     elif state == 7:
@@ -405,7 +403,7 @@ class Lex():
         self.token = 'Invalid'
 
   def term(self):
-    return self.pos >= self.size
+    return self.pos >= self.size-1
 
   def newString(self):
     if self.string[self.pos] == ' ' and self.pos < self.size:
