@@ -35,7 +35,7 @@ class Syntactic():
 					print('Cadena valida')
 				elif(self.action > 0):
 					self.stack.push(self.action)
-					print('PUSH \n")
+					print('PUSH \n')
 				elif(self.action < 0):
 					self.stack.pop(rules[self.action]['quantity'])
 					self.stack.push(m[int(self.stack.top())][rules[self.action]['column']])
